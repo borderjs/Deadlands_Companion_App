@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Deadlands_App"
+             x:Class="Deadlands_App.MainPage">
+    <Frame CornerRadius="5" OutlineColor="LightBlue" Padding="5" Margin="5">
+        <StackLayout>
+            <Label HorizontalOptions="CenterAndExpand" Text="Hit Location"/>
+            <BoxView HeightRequest="2" Color="LightBlue"></BoxView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout VerticalOptions="Center">
+                    <Frame CornerRadius="10" Padding="-10" Margin="5,5,0,0" HorizontalOptions="CenterAndExpand">
+                        <Button Text="Normal" BackgroundColor="LightBlue" x:Name="BtnHitLocation" Clicked="BtnHitLocation_Clicked"  HeightRequest="50" WidthRequest="90"/>
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Frame CornerRadius="10" Padding="-10" Margin="5,0,0,0">
+                            <Button Text="-2" BackgroundColor="LightBlue" x:Name="BtnHitLocationMinus2" Clicked="BtnHitLocationMinus2_Clicked" WidthRequest="50" HeightRequest="50"/>
+                        </Frame>
+                        <Frame CornerRadius="10" Padding="-10" Margin="5,0,0,0">
+                            <Button Text="+2" BackgroundColor="LightBlue" x:Name="BtnHitLocationPlus2" Clicked="BtnHitLocationPlus2_Clicked" WidthRequest="50" HeightRequest="50"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Frame CornerRadius="10" Padding="-10" Margin="5,0,0,0">
+                            <Button Text="+4" BackgroundColor="LightBlue" x:Name="BtnHitLocationPlus4" Clicked="BtnHitLocationPlus4_Clicked" WidthRequest="50" HeightRequest="50"/>
+                        </Frame>
+                        <Frame CornerRadius="10" Padding="-10" Margin="5,0,0,0">
+                            <Button Text="+6" BackgroundColor="LightBlue" x:Name="BtnHitLocationPlus6" Clicked="BtnHitLocationPlus6_Clicked" WidthRequest="50" HeightRequest="50"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+                <Frame CornerRadius="15" OutlineColor="LightBlue" Grid.Column="1" Margin="0,5,5,5" Padding="5">
+                    <StackLayout  Margin="5">
+                        <Label x:Name="lblResult" Text="Click Button For Result" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center" />
+                        <BoxView HeightRequest="2" Color="LightBlue" />
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Location:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="End" 
+                                Grid.Column="0" FontSize="Micro" />
+                            <Label x:Name="lblLocation" Text=" " 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Column="1" FontSize="Micro" />
+                        </Grid>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="1 Raise:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="End" 
+                                Grid.Column="0" FontSize="Micro"/>
+                            <Label x:Name="lbl1Raise" Text=" " 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Column="1" FontSize="Micro"/>
+                        </Grid>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="2 Raises:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="End" 
+                                Grid.Column="0" FontSize="Micro"/>
+                            <Label x:Name="lbl2Raises" Text=" " 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Column="1" FontSize="Micro" />
+                        </Grid>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="3 Raises:" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="End" 
+                                Grid.Column="0" FontSize="Micro"/>
+                            <Label x:Name="lbl3Raises" Text=" " 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Column="1" FontSize="Micro"/>
+                        </Grid>
+
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </Frame>
+</ContentPage>
